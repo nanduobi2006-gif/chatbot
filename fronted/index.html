@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axon AI | Cryptography Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <h2>AXON AI</h2>
+                <span>CYBER INTELLIGENCE</span>
+            </div>
+        </div>
+
+        <button class="new-chat" id="newChat">
+            <span>＋</span> New Chat
+        </button>
+
+        <div class="side-heading">WORKSPACE</div>
+
+        <div class="nav-item active">
+            <span>⌘</span> AI Assistant
+        </div>
+        <div class="nav-item">
+            <span>🔐</span> Cryptography
+        </div>
+        <div class="nav-item">
+            <span>🛡</span> Cybersecurity
+        </div>
+
+        <div class="side-heading history-heading">RECENT CHATS</div>
+        <div id="historyList" class="history-list">
+            <p class="empty-history">No conversations yet</p>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="profile-icon">A</div>
+            <div>
+                <strong>Axon AI User</strong>
+                <small>Personal Workspace</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <span class="online-dot"></span>
+                <span class="status">AI SYSTEM ONLINE</span>
+            </div>
+            <div class="top-right">
+                <span class="security-label">🔒 Secure Workspace</span>
+            </div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <!-- Welcome screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+
+                <div class="hero-icon">
+                    <span>✦</span>
+                </div>
+
+                <div class="hero-tag">ARTIFICIAL INTELLIGENCE × CRYPTOGRAPHY</div>
+
+                <h1>Welcome to <span>Axon AI</span></h1>
+
+                <p class="hero-description">
+                    Your intelligent cybersecurity and cryptography assistant.
+                    Explore encryption, understand security algorithms and
+                    discover how AI protects digital information.
+                </p>
+
+                <div class="suggestion-title">
+                    EXPLORE WHAT YOU CAN ASK
+                </div>
+
+                <div class="suggestions">
+
+                    <button class="suggestion-card"
+                        data-question="What is cryptography?">
+                        <span class="suggestion-icon">🔐</span>
+                        <strong>Cryptography Basics</strong>
+                        <small>Understand encryption and decryption</small>
+                    </button>
+
+                    <button class="suggestion-card"
+                        data-question="How is AI used in cryptography?">
+                        <span class="suggestion-icon">🧠</span>
+                        <strong>AI in Cryptography</strong>
+                        <small>Explore AI-powered security</small>
+                    </button>
+
+                    <button class="suggestion-card"
+                        data-question="Explain AES and RSA encryption.">
+                        <span class="suggestion-icon">🛡️</span>
+                        <strong>Encryption Algorithms</strong>
+                        <small>Learn AES, RSA and SHA-256</small>
+                    </button>
+
+                    <button class="suggestion-card"
+                        data-question="What is AI-based cryptanalysis?">
+                        <span class="suggestion-icon">🔍</span>
+                        <strong>Cryptanalysis</strong>
+                        <small>Explore cryptographic weaknesses</small>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Messages appear here -->
+            <div class="messages" id="messages"></div>
+
+        </section>
+
+        <!-- Input section -->
+        <footer class="input-section">
+            <form id="chatForm" class="input-box">
+                <textarea
+                    id="userInput"
+                    placeholder="Ask Axon AI anything about cryptography..."
+                    rows="1"
+                    required></textarea>
+
+                <button type="submit" id="sendButton" aria-label="Send message">
+                    ➤
+                </button>
+            </form>
+
+            <p class="input-note">
+                AXON AI can make mistakes. Verify important security information.
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
